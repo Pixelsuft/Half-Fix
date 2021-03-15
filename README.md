@@ -2,7 +2,7 @@
 [Halfix emulator](https://github.com/nepx/halfix) optimized for Windows<br />
 Half Fix is a portable x86 emulator written in C99. It allows you to run legacy operating systems on modern platforms. 
 
-# Added
+## Added
 1) Menu<br />
 2) Ctrl+Alt+Del, Alt+Tab, Alt+F4 key press in menu<br />
 3) Save/Load state in menu<br />
