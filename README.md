@@ -99,6 +99,10 @@ Yes, but not very quickly.
 
 ## Screenshots
 
+Windows NT 4.0
+
+![Windows NT 4.0](https://user-images.githubusercontent.com/68371847/111152701-9af81a80-85c3-11eb-8504-bd249edde62c.png)
+
 MS-DOS
 
 ![DOS](docs/pics/dos.png)
