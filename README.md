@@ -31,20 +31,6 @@ You will need `node.js`, a C99-compatible compiler, `zlib`, and Emscripten (only
 The display driver uses `libsdl`, but if you're on Windows, there's a native port that uses the Win32 API and doesn't require SDL. 
 
 ```bash
-# Debug, native
-node makefile.js
-# Debug, Emscripten, asm.js
-node makefile.js emscripten
-# Debug, Emscripten, WebAssembly
-node makefile.js emscripten --enable-wasm
-
-# Release, native
-node makefile.js release
-# Release, Emscripten, asm.js
-node makefile.js emscripten release
-# Release, Emscripten, WebAssembly
-node makefile.js emscripten --enable-wasm release
-
 # Win32 API build (no SDL required)
 node makefile.js win32
 # Win32 API build, release
@@ -57,7 +43,7 @@ node makefile.js --help
 node tools/imgsplit.js os.img
 
 # Run in browser
-http-server
+python -m http.server
 ```
 
 Check the [project wiki](https://github.com/nepx/halfix/wiki) for more details. 
