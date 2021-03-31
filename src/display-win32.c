@@ -66,7 +66,7 @@ static void display_capture_mouse(int yes)
         ShowCursor(FALSE);
         SetCursorPos(screenx, screeny);
     } else {
-        //ClipCursor(NULL);
+        ClipCursor(NULL);
         SetCapture(NULL);
         ShowCursor(TRUE);
     }
@@ -293,7 +293,11 @@ static LRESULT CALLBACK display_callback(HWND hwnd, UINT msg, WPARAM wparam, LPA
         }
         break;
     case WM_RBUTTONDOWN:
-        if(mouse_enabled)
+        if (!mouse_enabled) {
+            lparam_to_xy(lparam, &lastx, &lasty);
+            display_capture_mouse(1);
+        }
+        else
           kbd_mouse_down(MOUSE_STATUS_NOCHANGE, MOUSE_STATUS_NOCHANGE, MOUSE_STATUS_PRESSED);
         break;
     case WM_RBUTTONUP:
